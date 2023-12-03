@@ -82,11 +82,8 @@ $(() => {
     $table.append($thead)
 
     //Inside the thead element add two th elements
-    const $th1 = $("<th>")
-    $th1.text("Day")
-
-    const $th2 = $("<th>")
-    $th2.text("Classes")
+    const $th1 = $("<th>").text("Day")
+    const $th2 = $("<th>").text("Classes")
 
     $thead.append($th1)
     $thead.append($th2)
@@ -96,7 +93,6 @@ $(() => {
     $table.append($trMon)
 
     const $td1 = $("<td>").text("Monday")
-
     const $td2 = $("<td>").text("Herbology, Divination, History of Magic")
 
     $trMon.append($td1)
@@ -107,7 +103,6 @@ $(() => {
     $table.append($trTue)
 
     const $tdTue1 = $("<td>").text("Tuesday")
-
     const $tdTue2 = $("<td>").text("Charms, Potions, Transfiguration")
 
     $trTue.append($tdTue1)
@@ -118,7 +113,6 @@ $(() => {
     $table.append($trWed)
 
     const $tdWed1 = $("<td>").text("Wednesday")
-
     const $tdWed2 = $("<td>").text("Divination, History of Magic, Transfiguration")
 
     $trWed.append($tdWed1)
@@ -129,7 +123,6 @@ $(() => {
     $table.append($trThu)
 
     const $tdThu1 = $("<td>").text("Thursday")
-
     const $tdThu2 = $("<td>").text("Divination, Charms, Potions")
 
     $trThu.append($tdThu1)
@@ -140,11 +133,48 @@ $(() => {
     $table.append($trFri)
 
     const $tdFri1 = $("<td>").text("Friday")
-
     const $tdFri2 = $("<td>").text("Defense Against the Dark Arts, Quidditch practice, Potions")
 
     $trFri.append($tdFri1)
     $trFri.append($tdFri2)
+
+    //----------------
+    //Year 5
+    //----------------
+
+    //Break your wand! (select the element that contains your wand and remove it)
+    const $wand = $('h4')
+    $wand.eq(1).remove()  // h4 gives h4.cat and h4(contains the wand). So $wand.eq(1) gives the second h4 which is the wand. eq wraps the h4 in a jQuery object so that we can use jQuery methods (like remove()) on it 
+
+
+    //Class was hard! Drink all your butter beer! (remove just the butter beer from your list)
+    const $list = $("li")
+    const $beer = $list.eq(0) //gives butter beer, the first element from li
+    $beer.remove()
+
+    // Get a new wand (add the same element back with new text describing your new wand. Be sure to insert it after your pet in the DOM)
+
+    const $newWand = $("<h4>").text("Bolly Wand with Dragon Hair Core")
+    console.log($h4)
+    $newWand.insertAfter($h4)
+
+    //Make your new wand stand out by adding a color of indigo (or whatever color you like). But do it with magic (jQuery): Don't add this css in your main.css file
+    $newWand.css('color','indigo')
+
+    //Send your pet on a spy mission (remove your pet from the DOM, put it somewhere else in your HTML). Make sure your pet's leash stays in your trunk (list item with the same class as your pet inside unordered list)
+    const $pet = $('h4.cat')
+    $pet.insertAfter($h2) // inserting pet after my name (h2)
+
+    //Have your pet come back (remove your pet from the DOM, put it back in its original location)
+    $pet.insertAfter($h3)
+
+
+
+
+
+
+
+
 
 
 
