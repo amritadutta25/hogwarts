@@ -212,20 +212,7 @@ $(() => {
 
     // adding div.img to add an image that has no relation to the content
     const $divImg = $("<div>")
-    console.log($divImg)
     $divImg.attr('id','img')
     
-
-
-
-
-
-
-
-
-
-
-
-
 
 });
