@@ -65,6 +65,89 @@ $(() => {
     const $li6 = $('<li>').text("Bertie Bott's Every Flavor [Jelly] Beans")
     $ul.append($li6)
 
+    //----------------
+    //Year 4
+    //----------------
+
+    //creating h5 element
+    const $h5 = $("<h5>").text("Spring 2017")
+    $container.append($h5)
+
+    // creating table
+    const $table = $("<table>")
+    $container.append($table)
+
+    // add thead element
+    const $thead = $("<thead>")
+    $table.append($thead)
+
+    //Inside the thead element add two th elements
+    const $th1 = $("<th>")
+    $th1.text("Day")
+
+    const $th2 = $("<th>")
+    $th2.text("Classes")
+
+    $thead.append($th1)
+    $thead.append($th2)
+
+    //Create a tr element and add two td elements inside
+    const $trMon = $("<tr>")
+    $table.append($trMon)
+
+    const $td1 = $("<td>").text("Monday")
+
+    const $td2 = $("<td>").text("Herbology, Divination, History of Magic")
+
+    $trMon.append($td1)
+    $trMon.append($td2)
+
+    //tr for Tuesday
+    const $trTue = $("<tr>")
+    $table.append($trTue)
+
+    const $tdTue1 = $("<td>").text("Tuesday")
+
+    const $tdTue2 = $("<td>").text("Charms, Potions, Transfiguration")
+
+    $trTue.append($tdTue1)
+    $trTue.append($tdTue2)
+
+    //tr for Wednesday
+    const $trWed = $("<tr>")
+    $table.append($trWed)
+
+    const $tdWed1 = $("<td>").text("Wednesday")
+
+    const $tdWed2 = $("<td>").text("Divination, History of Magic, Transfiguration")
+
+    $trWed.append($tdWed1)
+    $trWed.append($tdWed2)
+
+    //tr for Thursday
+    const $trThu = $("<tr>")
+    $table.append($trThu)
+
+    const $tdThu1 = $("<td>").text("Thursday")
+
+    const $tdThu2 = $("<td>").text("Divination, Charms, Potions")
+
+    $trThu.append($tdThu1)
+    $trThu.append($tdThu2)
+
+    //tr for Friday
+    const $trFri = $("<tr>")
+    $table.append($trFri)
+
+    const $tdFri1 = $("<td>").text("Friday")
+
+    const $tdFri2 = $("<td>").text("Defense Against the Dark Arts, Quidditch practice, Potions")
+
+    $trFri.append($tdFri1)
+    $trFri.append($tdFri2)
+
+
+
 
 
 

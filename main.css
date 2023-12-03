@@ -1,5 +1,5 @@
 body {
-    background-color: #8364a2;
+    background-color: #d0a3d0;
     text-align: center
 }
 
@@ -13,4 +13,13 @@ body {
 
 li {
     list-style-type: none
+}
+
+table, th, td {
+    border: 1px solid;
+    border-color: gray
+}
+
+table {
+    margin: auto
 }
