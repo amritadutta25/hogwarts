@@ -169,6 +169,25 @@ $(() => {
     $pet.insertAfter($h3)
 
 
+    //----------------
+    //Year 6
+    //----------------
+
+    //Nosey roommate alert! hide (use jQuery method hide) to hide all your belongings with a class of secret (give an argument of 'slow' - to see this function in action)
+    //Nosey roommate falls asleep 2 seconds later (chain the jQuery method delay on your hide method (give argument of at least 2000) to prevent showing your secret elements too soon.
+
+    const $secret = $(".secret")
+    $secret.hide('slow').delay(2000)
+
+    $secret.show('slow')
+
+    //Accident! You transmogrified your pet's leash into half cabbage
+    const $leash = $("li.cat")
+    $leash.addClass('cabbage')
+
+    //Fix your pet's leash by removing the class of cabbage
+    $leash.removeClass("cabbage")
+
 
 
 
