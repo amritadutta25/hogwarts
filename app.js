@@ -11,6 +11,7 @@ $(() => {
     $h1.text('HOGWARTS')
     $container.append($h1)
 
+
     //----------------
     //Year 2
     //----------------
@@ -155,7 +156,6 @@ $(() => {
     // Get a new wand (add the same element back with new text describing your new wand. Be sure to insert it after your pet in the DOM)
 
     const $newWand = $("<h4>").text("Bolly Wand with Dragon Hair Core")
-    console.log($h4)
     $newWand.insertAfter($h4)
 
     //Make your new wand stand out by adding a color of indigo (or whatever color you like). But do it with magic (jQuery): Don't add this css in your main.css file
@@ -163,10 +163,15 @@ $(() => {
 
     //Send your pet on a spy mission (remove your pet from the DOM, put it somewhere else in your HTML). Make sure your pet's leash stays in your trunk (list item with the same class as your pet inside unordered list)
     const $pet = $('h4.cat')
-    $pet.insertAfter($h2) // inserting pet after my name (h2)
+    $pet.remove() 
 
     //Have your pet come back (remove your pet from the DOM, put it back in its original location)
-    $pet.insertAfter($h3)
+
+    // inserting pet back into the DOM after a delay 
+    setTimeout(() => {
+        ($pet).insertAfter($h3);
+    }, 2000);
+  
 
 
     //----------------
@@ -188,6 +193,28 @@ $(() => {
     //Fix your pet's leash by removing the class of cabbage
     $leash.removeClass("cabbage")
 
+    //----------------
+    //Year 7
+    //----------------
+
+    // Update your class schedule to read 'Fall 2018'
+    $h5.text("Fall 2018")
+
+    // Celebrate by buying more butter beer! Append a list item with the text 'Butter beer' as the first list item inside your unordered list with the value of trunk
+
+    // re-using $li1 that was used earlier to add 'Butter beer' to unordered list
+    $ul.prepend($li1)
+
+    //Whoops! You broke your trunk when you stood on it while singing karaoke. Get a new storage container for your stuff; replace the unodered list's property of trunk with a new property of chest
+    $ul.attr('storage','chest')
+
+    // add css
+
+    // adding div.img to add an image that has no relation to the content
+    const $divImg = $("<div>")
+    console.log($divImg)
+    $divImg.attr('id','img')
+    
 
 
 
